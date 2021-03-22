@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Core.PropertyEditors;
 
-namespace EnumLists
+namespace Our.Umbraco.EnumLists.ValueProcessing
 {
     public class EnumListsConverterPropertyValueConverter : PropertyValueConverterBase
     {

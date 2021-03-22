@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EnumLists</RootNamespace>
-    <AssemblyName>EnumLists</AssemblyName>
+    <RootNamespace>Our.Umbraco.EnumLists</RootNamespace>
+    <AssemblyName>Our.Umbraco.EnumLists</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
@@ -284,21 +284,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
+    <Content Include="package.manifest" />
+    <Content Include="App_Plugins\EnumLists\enum.resource.js" />
+    <Content Include="App_Plugins\EnumLists\enumcheckboxlist.controller.js" />
+    <Content Include="App_Plugins\EnumLists\enumcheckboxlist.html" />
+    <Content Include="App_Plugins\EnumLists\enumdropdownlist.html" />
+    <Content Include="App_Plugins\EnumLists\enumlist.controller.js" />
+    <Content Include="App_Plugins\EnumLists\enumradiobuttonlist.html" />
+    <Content Include="EnumLists.nuspec" />
+    <Content Include="App_Plugins\EnumLists\package.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="EnumListsConverterPropertyValueConverter.cs" />
     <Compile Include="Constants.cs" />
-    <Compile Include="EnumApiController.cs" />
+    <Compile Include="Controllers\EnumApiController.cs" />
+    <Compile Include="ValueProcessing\EnumListsConverterPropertyValueConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Web\UI\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

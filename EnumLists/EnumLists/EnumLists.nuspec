@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Our.Umbraco.EnumLists</id>
+    <version>$version$</version>
+    <title>.EnumLists web application</title>
+    <authors>Jeroen Breuer, David van de Vliet</authors>
+    <projectUrl>https://github.com/dvdvliet/EnumLists</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Adds three new data types to Umbraco CMS that reference Enum types. Was build against 8.12.1 but might also work for older v8 versions.</description>
+    <copyright>Copyright 2021</copyright>
+  </metadata>
+  <files>
+    <file src="App_Plugins\*" target="App_Plugins\" />
+  </files>
+</package>

@@ -5,7 +5,7 @@ using System.Web.Hosting;
 using Umbraco.Web.Editors;
 using Umbraco.Web.Mvc;
 
-namespace EnumLists
+namespace Our.Umbraco.EnumLists.Controllers
 {
     [PluginController("EnumLists")]
     public class EnumApiController : UmbracoAuthorizedJsonController

@@ -1,4 +1,4 @@
-﻿namespace EnumLists
+﻿namespace Our.Umbraco.EnumLists
 {
     public static class Constants
     {
