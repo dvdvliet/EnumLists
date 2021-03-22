@@ -1,12 +1,19 @@
-<div class="umb-editor umb-checkboxlist" ng-controller="EnumCheckBoxList">
+<div class="umb-property-editor umb-checkboxlist" ng-controller="EnumCheckBoxList as vm">
 
     <ul class="unstyled">
         <li ng-repeat="item in selectedItems">
-            <label class="checkbox">
+            <label class="checkbox umb-form-check umb-form-check--checkbox ">
                 <input type="checkbox" name="checkboxlist"
                        value="{{item.key}}"
-                       ng-model="item.checked" />
-                {{item.val}}
+                       ng-model="item.checked"
+                       class="umb-form-check__input" />
+                       
+                <div class="umb-form-check__state umb-form-check__state" aria-hidden="true">
+                    <div class="umb-form-check__check">
+                        <i class="umb-form-check__icon icon-check"></i>
+                    </div>
+                </div>
+                <span class="umb-form-check__info">{{item.val}}</span>
             </label>
         </li>
     </ul>

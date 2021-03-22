@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Web;
 using System.Web.Hosting;
 using Umbraco.Web.Editors;
 using Umbraco.Web.Mvc;
@@ -15,7 +13,14 @@ namespace EnumLists
         public IEnumerable<string> GetAll(string assemblyName, string typeName)
         {
             var assembly = GetAssembly(assemblyName);
+            if (assembly == null)
+                throw new ArgumentException($"DataType Error: Assembly {assemblyName} does not exists.",
+                    nameof(assemblyName));
+
             var type = assembly.GetType(typeName);
+            if (type == null)
+                throw new ArgumentException(
+                    $"DataType Error: Type {typeName} does not exists in assembly {assemblyName}.", nameof(typeName));
 
             List<string> items = new List<string>();
 
@@ -32,7 +37,7 @@ namespace EnumLists
         /// </summary>
         /// <param name="assemblyName">The <see cref="Assembly"/> name.</param>
         /// <returns>The <see cref="Assembly"/>.</returns>
-        public static Assembly GetAssembly(string assemblyName)
+        private static Assembly GetAssembly(string assemblyName)
         {
             if (string.Equals(assemblyName, "App_Code", StringComparison.InvariantCultureIgnoreCase))
             {
